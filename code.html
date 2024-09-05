@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aamen</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+
+   
+body {
+  background-color: #120837;
+  font-family: 'Cairo', serif;
+  text-align: right;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #120837;
+  color: white;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2em 1em;
+  z-index: 999;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top 0.3s; /* Add smooth transition effect */
+}
+.home{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.navbar-logo img {
+  width: 2.5em;
+  height: auto;
+  margin-right: 1em;
+  
+}
+
+.navbar-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 1.5em;
+  display: flex;
+}
+
+.navbar-links li {
+  margin-left: 20px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.7em;
+  font-weight: bold;
+}
+
+/* Hover effect */
+.navbar-links a:hover {
+  border-bottom: 2px solid white;
+}
+.container{
+  padding: 0em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 50%;
+  text-align: right;
+
+}
+.container button{
+  background-color: #410FD3;
+  color: white;
+  border-radius: 10px;
+  width: 200px;
+  height: 50px;
+}
+.imagesection{
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  width: 30%;
+  justify-content: center;
+}
+.withyou{
+  padding-top: 0px;
+}
+.title{
+  font-size: 85px;
+  
+  font-weight: bold;
+  color:white;
+  text-align: right;
+  
+}
+.subtitle{
+  color:white;
+  text-align: right;
+  
+}
+.container2 {
+  width: 800px;
+  margin: 0;
+  background-color: #fff;
+  padding: 10px 50px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+button {
+  background-color: white;
+  color:#12043E;
+  border: none;
+  padding: 10px 10px;
+  font-size: 18px;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 100px;
+  align-self: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+button:hover {
+  background-color:#5315FC; 
+}
+.section4{
+  display: flex ;
+  justify-content: center;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  width: 100%;
+  height: 100%;
+
+}
+
+.whats button{
+  font-size: 15px;
+  background-color: #120837;
+  width: fit-content;
+  height: 4em;
+  border-radius: 15px;
+  padding: 10px;
+}
+.button{
+  cursor: pointer;
+  transition: transform 0.20s ease-in-out; 
+}
+button:hover{
+  transform: scale(1.1);
+}
+.home{
+  height: 100vh; 
+  background-color: #120837;
+  padding-top: 10px; 
+}
+
+.button{
+  cursor: pointer;
+  transition: transform 0.20s ease-in-out; 
+}
+button:hover{
+  transform: scale(1.1);
+}
+
+.card1 {
+  background-color: #FDFFF4;
+  border-radius: 10px;
+  border-top: 30px solid #016A70;opacity: 0.8;
+  border-bottom: 30px solid #016A70;opacity: 0.8;;
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+}
+
+/* Style the image within the card */
+.card1 img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Style the quote text */
+.quote {
+  margin-top: 10px;
+  font-style: italic;
+  font-size: 20px;
+}
+.section3{
+  display: flex ;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 20em;
+  padding-bottom: 5em;
+}
+.card1 p{
+  color:#016A70;
+  font-weight: bold;
+}
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5em;
+  padding-bottom: 5em;
+  margin-top: 0em;
+  
+
+}
+
+/* Cards */
+.card , .boxing{
+  background-color: #5d42a3;
+  display: flex;
+  flex-direction: row-reverse;
+  width: 30em;
+  height: 20em;
+  margin: 10px;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Card image */
+.card-image {
+  opacity: 100%;
+  float: right;
+  width: 60%;
+}
+
+/* Card text and button */
+.card-text {
+  color: #fff;
+  padding-top: 50px;
+  text-align: right;
+  width: 40%;
+  padding-right: 10px;
+}
+h1{
+  color: white;
+}
+/* Card button */
+.card-button {
+  margin-top: 10px;
+  text-align: center;
+}
+.card2-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10em;
+}
+.container2 h1{
+  color: #120837;
+}
+/* Card */
+.card2 {
+  width: 1200px;
+  height: 500px;
+  margin: 10px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Card image */
+.card2-image {
+  float: left;
+  width: 500px;
+}
+
+/* Card text and buttons */
+.card2-text-and-buttons {
+  float: right;
+  width: 500px;
+  padding: 30px;
+  text-align: right;
+}
+
+/* Card title */
+.card2-title {
+  margin-top: 0;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/* Card paragraph */
+.card2-paragraph {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+/* Card buttons */
+.card2-button {
+  border-radius: 20px;
+  margin-top: 10px;
+  text-align: right;
+  width: fit-content;
+  margin: 20px;
+  padding: 16px;
+}
+
+/* Card buttons alignment */
+.card2-buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 10px;
+}
+.rotationsection{
+  display: flex ;
+  justify-content: center;
+  padding-top: 1em;
+  padding-bottom: 5em;
+}
+section{
+  padding-top: 70px;
+  padding-right: 35px;
+  padding-left: 35px;
+  padding-bottom: 100px;
+
+  
+}
+.slid{
+  display: flex ;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 30px;
+  height: 600px;
+}
+
+.wrapper{
+  margin:auto;
+  width: 250px;
+  position: relative;
+  perspective: 1000px;
+  padding-top: 90px;
+
+}
+
+.caresoul{
+  width: 100%;
+  position: absolute;
+  float: right;
+  animation: rotar 20s infinite linear;
+  transform-style: preserve-3d;
+
+}
+.caresoul :hover{
+  animation-play-state: paused;
+  cursor: pointer;
+  transition: 0.7s ease;
+}
+.caresoul img{
+  image-rendering: auto;
+  transition: all 300ms;
+  transition: 1.9s ease;
+  width: 100%;
+  height: 100%;
+}
+.caresoul img :hover{
+  transform: scale(1.2);
+  transition: all 300ms;
+
+}
+.shadow{
+  position: absolute;
+  box-shadow: 2px 2px 40px 2px rgba(0, 0, 0, 0.616) ;
+  border-radius: 2px;
+  
+}
+.caresoul figure{
+  margin: 0px;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #0000008e;
+  position: absolute;
+}
+.caresoul figure :hover{
+  transform: scale(1.2);
+}
+.figure :hover{
+  transform: scale(1.2);
+}
+.caresoul figure:nth-child(1){
+  transform: rotateY(0deg) translateZ(300px);
+
+}
+.caresoul figure:nth-child(2){
+  transform: rotateY(60deg) translateZ(300px);
+  
+}
+.caresoul figure:nth-child(3){
+  transform: rotateY(120deg) translateZ(300px);
+  
+}
+.caresoul figure:nth-child(4){
+  transform: rotateY(180deg) translateZ(300px);
+  
+}
+.caresoul figure:nth-child(5){
+  transform: rotateY(240deg) translateZ(300px);
+  
+}
+.caresoul figure:nth-child(6){
+  transform: rotateY(300deg) translateZ(300px);
+}
+@keyframes rotar{
+  from{transform:rotateY(0deg)}
+  to{transform:rotateY(360deg)}
+}
+.section2{
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 5em;
+    padding-bottom: 1em;
+    width: 100%;
+    height: 100%;
+  
+}
+
+.flexwhats{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+.whats{
+  border-radius: 10px;
+  background-color:#DBDBDB;
+  width: 60%;
+  height: 10em;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin: 10px;
+  padding: 0.5em;
+  
+  box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.3);
+  
+}
+.section5{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5em;
+  padding-bottom: 7em;
+}
+.griding {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.grid {
+  flex: 0 0 25%;
+  padding: 10px;
+  text-align: center;
+}
+
+.grid-image {
+  width: 100%;
+  height: auto;
+}
+.callout {
+  height: 170px;
+  width: 240px;
+  background-color: #6C39F0;
+  border-radius: 46px;
+  position: relative;
+}
+.callout::after {
+  content: '';
+  border: 50px solid transparent;
+  border-top: 50px solid #6C39F0
+  ;
+  position: absolute;
+  bottom: -80px;
+  right: 0px;
+}
+.callout {
+  background-color:#6C39F0
+  ;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.callout h2 {
+  font-size: 10px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #120837;
+}
+.num1{
+  margin-top: 5em;
+  background-color: #b195fa;
+}
+.image3{
+  height: 180px;
+  width: 180px;
+  margin-top: 3em;
+}
+.num3{
+  margin-top: 5em;
+  background-color: #b195fa;
+}
+.num2{
+  background-color: #6C39F0
+  ;
+}
+.callout button {
+  background-color: #120440;
+  color: white;
+  font-size: 14px;
+  padding: 2px 2px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.5);
+
+}
+.image1{
+  margin-top: 10em;
+}
+.num1::after{
+  border-top: 50px solid #b195fa;
+}
+
+.num3::after{
+  border-top: 50px solid #b195fa;
+}
+
+.modal , .modal1 , .modal2{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content ,.modal-content1 ,.modal-content2 {
+  margin: 10% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 700px;
+  background-color: #fff;
+  position: relative;
+}
+
+.close , .close1 ,.close2 {
+  color: #000000;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus ,
+.close1:hover,
+.close1:focus,
+.close2:hover,
+.close2:focus {
+  color: #76a066;
+  text-decoration: none;
+  cursor: pointer;
+}
+.card-container button{
+  background-color: #6C39F0;
+  color: white;
+}
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.box {
+  background-color: white;
+  margin: 20px;
+  padding-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+  width: 150px;
+  box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.5);
+  height: max-content;
+  
+}
+
+.box img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.box p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.box p a {
+  color: #007bff;
+}
+.section2{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .box {
+      width: 100%;
+      max-width: 300px;
+  }
+  .navbar{
+    width: 100%;
+  }
+  .home{
+    width: 100%;
+  }
+  .rotationsection{
+    width: 100%;
+  }
+  .section5{
+    width:100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .grid{
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+    width: 100%;
+  }
+  .section6{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .whats{
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .whatsimg{
+    width: auto;
+    height: 3px;
+    box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.4);
+  }
+  
+  .section4{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .card-container{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .card2 {
+    width: 90%;
+    height: auto;
+  }
+
+  .card2-image,
+  .card2-text-and-buttons {
+    width: 100%;
+    float: none;
+  }
+
+  .card2-text-and-buttons {
+    text-align: center;
+  }
+}
+/* Default styles for larger screens */
+.section5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0em;
+  padding-bottom: 7em;
+}
+
+.griding {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.grid {
+  flex: 0 0 25%;
+  padding: 10px;
+  text-align: center;
+}
+
+.grid-image {
+  width: 100%;
+  height: auto;
+}
+
+.image3 {
+  height: 180px;
+  width: 180px;
+  margin-top: 3em;
+}
+
+.image1 {
+  margin-top: 5em;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .grid {
+    flex: 0 0 50%;
+  }
+
+  .image1,
+  .image3 {
+    margin-top: 3em;
+  }
+  .section6{
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .slid {
+    height: 400px; /* Adjust the height as needed for smaller screens */
+  }
+
+  .wrapper {
+    width: 200px; /* Adjust the width as needed for smaller screens */
+  }
+
+  .caresoul figure {
+    width: 200px; /* Adjust the width as needed for smaller screens */
+    height: 200px; /* Adjust the height as needed for smaller screens */
+  }
+}
+
+.section6{
+  display: flex;
+  flex-direction: column;
+}
+
+body{
+  font-family: 'Cairo', serif;
+}
+.textbox{
+  margin: 5px;
+  width: 80%;
+  margin-right: 20px;
+}
+.end {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+}
+footer p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+.carousel-containerslider {
+  position: relative;
+  width: 50%;
+  max-width: 500px;
+  overflow: hidden;
+}
+
+.carouselslider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.cardslider {
+  height: 400px;
+  width: 100px;
+  flex: 0 0 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-right: 20px;
+  background-color: #5d42a3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 18px 0px rgba(255, 255, 255, 0.5);
+}
+
+.cardslider img {
+  width: 50%;
+  height: 170px;
+  object-fit: cover;
+  
+  
+}
+
+.card-contentslider {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardslider h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+  color: white;
+
+}
+
+.cardslider p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: white;
+}
+.cardslider button {
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  width: fit-content;
+  text-align: center;
+  color: #120440;
+  background-color: #b195fa;
+}
+
+.navigationslider {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.arrow {
+  font-size: 1rem;
+  width: 1.5rem;
+  color: white;
+  cursor: pointer;
+  background: none;
+  border: none;
+  box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.4);
+}
+
+.dots {
+  text-align: center;
+  margin-top: 10px;
+}
+.card-container{
+  padding-top: 0em;
+  padding-bottom: 10em;
+}
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #3498db;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px;
+  min-height: 100vh;
+}
+
+.card {
+  background: #287bff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  width: 320px;
+  height: 450px;
+  margin: 30px;
+  border-radius: 20px;
+  border-bottom-left-radius: 160px;
+  border-bottom-right-radius: 160px;
+  box-shadow: 0 15px 0 #fff,
+          inset 0 -15px 0 rgba(255, 255, 255, 0.24),
+          0 45px 0 rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+   
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -140px;
+  left: -40%;
+  padding: 0;
+  width: 100%;
+  height: 120%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2));
+  transform: rotate(35deg);
+  pointer-events: none;
+  filter: blur(5px);
+}
+
+.card:nth-child(1) {
+  background: linear-gradient(to bottom, #ff2ae0, #645bf6);
+}
+
+.card:nth-child(2) {
+  background: linear-gradient(to bottom, #ffec61, #f321d7);
+}
+
+.card:nth-child(3) {
+  background: linear-gradient(to bottom, #24ff72, #9a4eff);
+}
+
+.card .icon {
+  position: relative;
+  width: 140px;
+  height: 120px;
+  background: #3c2846;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  box-shadow: 0 15px 0 rgba(0, 0, 0, 0.1),
+          inset 0 -8px 0 #fff;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.card .icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50px;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-top-right-radius: 50px;
+  box-shadow: 15px -15px 0 15px #3c2846;
+}
+
+.card .icon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -50px;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-top-left-radius: 50px;
+  box-shadow: -15px -15px 0 15px #3c2846;
+}
+
+.card .icon ion-icon {
+  color: #fff;
+  position: relative;
+  font-size: 6em;
+  z-index: 1000;
+  --ionicon-stroke-width: 24px;
+}
+
+
+.card .content {
+  position: absolute;
+  width: 100%;
+  padding: 30px;
+  padding-top: 150px;
+  text-align: center;
+}
+
+.card .content h2 {
+  font-size: 1.8em;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.card .content p {
+  color: #fff;
+  line-height: 1.5em;
+}
+.card .card-button{
+  background-color: #120837;
+}
+.section4 button{
+  background-color: #120440;
+  color: white;
+}
+.container3 {
+  display: flex;
+}
+
+.box2 {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  width: 26em;
+  height: 14em;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.box2 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container3.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #5d42a3;
+  border-radius: 5px;
+}
+.column{
+  display: flex;
+  flex-direction: column;
+ 
+}
+#ar{
+  width: 70%;
+  height: 29em;
+
+}
+.button2{
+  font-size: 15px;
+  background-color: #120440;
+  color: white;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 15px;
+  padding: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.p2{
+  width: fit-content;
+  margin: 10px;
+  font-size: 1em;
+  color: white;
+  text-align: right;
+}
+.button2{
+  cursor: pointer;
+  transition: transform 0.20s ease-in-out; 
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.104);
+}
+.whatsimg{
+  width: auto;
+  height: 8em;
+  box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.4);
+}
+.whats button{
+  background-color: #120837;
+  color: white;
+  height: fit-content;
+}
+.textbox{
+    width: 90%;
+  }
+  .whats{
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .whatsimg{
+    width: auto;
+    height: 3px;
+    box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.4);
+  }
+  .whats img{
+    margin-bottom: auto;
+    margin-right: 2.5em;
+  }
+  .whats h1{
+    text-align: right;
+    color:#120837;
+    font-size: 20px;
+    margin: 10px;
+    width: fit-content;
+  }
+  .whats p{
+    font-size: 0.75em;
+  
+    text-align: right;
+    color:black;
+    margin-top: 15px;
+  }
+  .whats button{
+    font-size: 15px;
+    background-color: #120837;
+    width: fit-content;
+    height: 4em;
+    border-radius: 15px;
+    padding: 10px;
+  }
+.home2{
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
+  margin: 5em;
+  margin-bottom: 0em;
+}
+.haker{
+  margin-right: 0;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    width: 80%; /* Adjust the width for smaller screens */
+  }
+
+  .title {
+    font-size: 60px; /* Adjust font size for smaller screens */
+  }
+
+  .subtitle {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+}
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <a href="index.html" > <img src="aamenlogo.png" alt="لوجو الموقع"></a>
+    </div>
+    <ul class="navbar-links">
+      <li><a href="#section4">مساعدة و دعم</a></li>
+      <li><a href="#section5" >قصص ملهمة </a></li>
+      <li><a href="vr.html" target="_blank">تعلم بالواقع المعزز و الافتراضى </a></li> 
+         <li><a href="courses - Copy.html" target="_blank">كورسات مفيدة</a></li> 
+      <li><a href="#section2" >مفاهيم مهمة</a></li>
+      <li><a href="audio.html" target="_blank">بودكاست احنا معاك</a></li>
+    </ul>
+</nav>
+<div class="home">
+  <video autoplay muted loop  class="video"id="video">
+    <source src="aamn.mp4" type="video/mp4">
+  </video>
+<div class="container">
+  <h1 class="title">
+    Aamen_آمن
+  </h1>
+  <h3 class="subtitle">متخفش و قول كل حاجة و احنا هنساعدك , افهم اكتر عن الامن السيبرانى و خلى عالمك الرقمى آمن .</h3>
+  <a href="#section2"><button>ابدأ رحلتك</button></a>
+</div>
+</div>
+</div>
+
+ <div class="section2" id="section2">
+<h1>مفاهيم مهمة</h1>
+
+    <div class="carousel-containerslider">
+        <div class="carouselslider">
+            <div class="cardslider">
+                <img src="onlinebully (4).png" alt="Card Image 1">
+                <div class="card-contentslider">
+                  <h2>الأمن السيبراني</h2>
+                  <p>هو مجموعة من الممارسات والتقنيات التي تهدف إلى حماية المعلومات والأنظمة الإلكترونية من الهجمات الإلكترونية. حماية البيانات هي عملية حماية البيانات الحساسة من الوصول غير المصرح به أو الاستخدام أو التعديل أو الإفشاء أو التدمير.</p>
+                 <a href="fomo.html" target="_blank"> <button>تعرف اكثر عن الأمن السيبرانى</button></a>
+                  </div>
+            </div>
+            <div class="cardslider">
+                <img src="onlinebully (3).png" alt="Card Image 2">
+                <div class="card-contentslider">
+                  <h2>ما هى البصمة الرقمية؟</h2>
+      <p>هو كل ما نتركه من اثر عند استخدامنا للسوشيال ميديا</p>
+     <a href="digitalmark.html" target="_blank"> <button>تعرف اكثر عن البصمة الرقمية</button></a>
+                </div>
+            </div>
+            <div class="cardslider">
+                <img src="onlinebully (1).png" alt="Card Image 3">
+                <div class="card-contentslider">
+                  <h2>ما هو التنمر الاليكترونى ؟</h2>
+                  <p>التنمر الإلكتروني هو تنمر باستخدام التقنيات الرقمية، ويمكن أن يحدث على وسائل التواصل الاجتماعي ومنصات المراسلةومنصات الألعاب والهواتف المحمولة، وهو سلوك متكرر يهدف إلى إخافة أو استفزاز المستهدفين به أو تشويه سمعتهم. </p>
+                  <a href="onlinebullying.html" target="_blank"><button>تعرف اكثر عن التنمر الاليكترونى</button></a>
+               
+                </div>
+            </div>
+            <div class="cardslider">
+                <img src="onlinebully (2).png" alt="Card Image 4">
+                <div class="card-contentslider">
+                  <h2>ما هو الاستدراج ؟</h2>
+                  <p>الاستمالة او الاستدراج يحدث عندما يقوم شخص ما ببناء علاقة مع شخص و كسب ثقته حتى يتم استغلاله</p>
+                 <a href="lean.html" target="_blank"> <button>تعرف اكثر عن الاستدراج</button></a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="navigationslider">
+            <button class="arrow" onclick="prevSlide()">&#9664;</button>
+            <button class="arrow" onclick="nextSlide()">&#9654;</button>
+        </div>
+    
+        <div class="dots" id="pagination"></div>
+    </div>
+    
+ </div>
+  
+ <div class="home2">
+  <iframe width="640" height="360" src="https://www.youtube.com/embed/y4NzAN4BiEQ" title="هاكر نادم" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+ <img class="haker"src="alamn.png">
+
+</div>  
+      
+
+</div>
+
+<div class="card-container">
+  <div class="boxing">
+    <img class="card-image" src="18.png" alt="Image description">
+    <div class="card-text">
+      <h3>كيف تقدم مساعدة لاولادك</h3>
+      <a href="helpparents.html" target="_blank"><button class="card-button">اضغط هنا</button></a>
+    </div>
+  </div>
+  <div class="boxing">
+    <img class="card-image" src="19.png" alt="Image description">
+    <div class="card-text">
+      <h3>كيف تقدم مساعدة لطلابك</h3>
+      <a href="helpteachers.html" target="_blank"><button class="card-button">اضغط هنا</button></a>
+    </div>
+  </div>
+</div>
+<div class="card2-container">
+  <div class="container">
+    <div class="card">
+      <div class="icon">
+        <ion-icon name="finger-print-outline"></ion-icon>
+      </div>
+      <div class="content">
+        <h2>ازاى نحمى نفسنا على الانترنت و نتعامل مع المشكلات</h2>
+        <a href="waystobesave.html" target="_blank"><button class="card-button">اضغط هنا</button></a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="icon">
+        <ion-icon name="layers-outline"></ion-icon>
+      </div>
+      <div class="content">
+        <h2> برمجيات مهم تحميلها</h2>
+        <a href="apps.html" target="_blank"><button class="card-button">اضغط هنا</button></a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="icon">
+        <ion-icon name="lock-open-outline"></ion-icon>
+      </div>
+      <div class="content">
+        <h2>تعمل ايه لو واجهت مشكلة على الانترنت</h2>
+        <a href="solutions.html" target="_blank"><button class="card-button">اضغط هنا</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+  <h1>قصص ملهمة</h1>
+<div class="section5" id="section5">
+
+  <div class="griding">
+    <div class="grid">
+        <img src="22.png"  alt="Image 1" class="image1 grid-image">
+    </div>
+    <div class="grid">
+        <div class="callout num1">
+            <h2>عنوان القصة: "جرح الكلمات: حكاية وقت التنمر الإلكتروني</h2>
+            
+            <button class="btnsec5" id="openModalBtn1">تعرف على القصة</button>
+            <div id="videoModal1" class="modal1">
+              <div class="modal-content1">
+                  <span class="close1">&times;</span>
+                  <iframe id="videoFrame1"width="560" height="315" src="https://www.youtube.com/embed/0yfXjroGjuE" title="قصة فتاة  تواجه التنمر الاليكترونى" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+             </div>
+        </div>
+    </div>
+    <div class="grid">
+        
+        <div class="callout num2">
+            <h2>احلام عندها 15 سنة تعرضت للاستدراج و الابتزاز</h2>
+
+            <button class="btnsec5" id="openModalBtn">تعرف على القصة</button>
+
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="videoFrame" width="560" height="315" src="https://www.youtube.com/embed/Wyb5vf2qEQA" title="قصة فتاة تتعرض للاستدراج و الابتزاز الاليكترونى" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+       </div>
+            
+        </div>
+        <img src="21.png" alt="Image 2" class="image2 grid-image">
+    </div>
+    <div class="grid">
+        
+        <div class="callout num3">
+            <h2>عنوان القصة: "في غرفة الخوف: قصة ولد يواجه حالة فومو </h2>
+
+            <button class="btnsec5" id="openModalBtn2">تعرف على القصة</button>
+            <div id="videoModal2" class="modal2">
+              <div class="modal-content2">
+                  <span class="close2">&times;</span>
+                  <iframe id="videoFrame2" width="560" height="315" src="https://www.youtube.com/embed/Te22pB8xGqY" title="قصة كرتون لولد مصاب بحالة فومو" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+             </div>
+        </div>
+        <img src="23.png" alt="Image 3" class="image3 grid-image">
+    </div>
+  </div>
+</div>
+
+<div class="section4" id="section4">
+<div class="container2">
+  <h1>احصل على مساعدة</h1>
+  <form id="contact-form" method="post" action="https://formspree.io/f/mpzgblbk">
+      <label for="name">الاسم </label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">الايميل </label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="subject">الصف الدراسى </label>
+      <input type="text" id="subject" name="subject" required>
+
+      <label for="message">المشكلة</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit">ابعت</button>
+  </form>
+  </div>
+</div>
+<footer class="end">
+  <p>
+    Copyrights @  
+   <span>Arwa Wesam Elsaid (small creative project) Aamen 2023</span>
+ </p>
+</footer>
+
+<script>
+  /* JavaScript */
+  var modal = document.getElementById("videoModal");
+  var btn = document.getElementById("openModalBtn");
+  var span = document.getElementsByClassName("close")[0];
+  var videoFrame = document.getElementById("videoFrame");
+  
+  btn.onclick = function() {
+      modal.style.display = "block";
+      var videoId = "Wyb5vf2qEQA"; // Replace this with your YouTube video ID
+      videoFrame.src = "https://youtube.com/embed/" + videoId;
+  }
+  
+  span.onclick = function() {
+      modal.style.display = "none";
+      videoFrame.src = "";
+  }
+  
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+          videoFrame.src = "";
+      }
+  }
+  
+// Make the modal responsive
+window.addEventListener('resize', () => {
+  const modalContent = modal.querySelector('.modal-content');
+  modalContent.style.width = Math.min(500, window.innerWidth) + 'px';
+  modalContent.style.height = Math.min(300, window.innerHeight) + 'px';
+});
+
+
+var modal1 = document.getElementById("videoModal1");
+var btn1 = document.getElementById("openModalBtn1");
+var span1 = document.getElementsByClassName("close1")[0];
+var videoFrame1 = document.getElementById("videoFrame1");
+
+btn1.onclick = function() {
+    modal1.style.display = "block";
+    var videoId1 = "0yfXjroGjuE"; // Replace this with your YouTube video ID
+    videoFrame1.src = "https://youtube.com/embed/" + videoId1;
+}
+
+span1.onclick = function() {
+    modal1.style.display = "none";
+    videoFrame1.src = "";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal1) {
+        modal1.style.display = "none";
+        videoFrame1.src = "";
+    }
+}
+
+// Make the modal responsive
+window.addEventListener('resize', () => {
+const modalContent1 = modal.querySelector('.modal-content1');
+modalContent1.style.width = Math.min(500, window.innerWidth) + 'px';
+modalContent1.style.height = Math.min(300, window.innerHeight) + 'px';
+});
+
+
+var modal2 = document.getElementById("videoModal2");
+var btn2 = document.getElementById("openModalBtn2");
+var span2 = document.getElementsByClassName("close2")[0];
+var videoFrame2 = document.getElementById("videoFrame2");
+
+btn2.onclick = function() {
+    modal2.style.display = "block";
+    var videoId2 = "Te22pB8xGqY"; // Replace this with your YouTube video ID
+    videoFrame2.src = "https://www.youtube.com/embed/" + videoId2;
+}
+
+span2.onclick = function() {
+    modal2.style.display = "none";
+    videoFrame2.src = "";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal2) {
+        modal2.style.display = "none";
+        videoFrame2.src = "";
+    }
+}
+
+// Make the modal responsive
+window.addEventListener('resize', () => {
+const modalContent2 = modal2.querySelector('.modal-content2');
+modalContent2.style.width = Math.min(500, window.innerWidth) + 'px';
+modalContent2.style.height = Math.min(300, window.innerHeight) + 'px';
+});
+const carouselslider = document.querySelector('.carouselslider');
+const dotsContainer = document.getElementById('pagination');
+let currentIndex = 0;
+
+function updateDots() {
+    dotsContainer.innerHTML = '';
+    for (let i = 0; i < carouselslider.children.length; i++) {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+    }
+    dotsContainer.children[currentIndex].classList.add('active');
+}
+
+function updateCarousel() {
+    carouselslider.style.transform = `translateX(${-currentIndex * 100}%)`;
+    updateDots();
+}
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1.04) % carouselslider.children.length;
+    updateCarousel();
+}
+
+function prevSlide() {
+    currentIndex = (currentIndex - 1.04 + carouselslider.children.length) % carouselslider.children.length;
+    updateCarousel();
+}
+
+function goToSlide(index) {
+    currentIndex = index;
+    updateCarousel();
+}
+
+updateDots();
+
+
+</script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<div class="grid-container">
+
+  <img src="im1.jpg" alt="image">
+  <div class="grid-box">
+    <h3>تعرف على مبرمجى المستقبل</h3>
+    <a class="button" href="#section2">شوف باقى صور رحلتنا</a>
+  </div>
+  <p>صور طلابنا المبدعين خلال رحلتنا ونحن هنا لبناء مستقبل مشرق للأطفال و الشباب من خلال تقديم رحلة تعليمية متكاملة. انضموا إلينا في رحلة إلهامية في عالم الابتكار والتكنولوجيا</p>
+  <img src="im13.jpg" alt="image">
+  <img src="im2.jpg" alt="image">
+
+  <img src="im3.jpg" alt="image">
+
+  <img src="im4.jpg" alt="image">
+  <img src="im5.jpg" alt="image">
+
+  
+
+
+</div>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

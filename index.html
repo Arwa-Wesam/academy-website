@@ -1,0 +1,1493 @@
+  <!DOCTYPE html>
+  <html lang="ar">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i-Developer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&family=Zain:wght@200;300;400;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <style>
+            /*body main code for start*/
+            body {
+              margin: 0;
+              padding: 0;
+              font-family: "Zain", sans-serif;
+              font-optical-sizing: auto;
+              font-weight: 100px;
+              font-style: normal;
+              background-color: #1A2B4F;
+              height: 100vh;
+              text-align: right;
+              overflow-x: hidden;
+              
+            }
+            /*header main code for horizontal nav bar*/
+            header {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              position: fixed;  /* Make icons fixed to the right side */
+              top: 0;
+              right: 0;
+              left: 0;  /* Position icons at right edge */
+              z-index: 1000 !important;
+              width: 100%;
+              
+              
+            }
+            /*header main nav code for horizontal nav bar*/
+            .main-nav {
+              direction: rtl;
+              width: 100%; 
+              height: 90%;
+              display: flex;
+              justify-content: space-between;
+              padding: 5px 60px 20px 60px;
+              background-color: #5C8DBC;
+              color: white;
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+            /*words in nav bar*/
+            .main-nav a {
+              text-decoration: none;
+              color: white;
+              padding: 10px 20px;
+              border-radius: 5px;
+            }
+            /*header sub nav code for horizontal nav bar*/
+            .sub-nav {
+              width: 90%;
+              height: 50px;
+              direction: rtl;
+              display: flex;
+              padding: 0 20px;
+              justify-content: flex-start;
+              flex-direction: row;
+              align-items: center;
+              color: black;
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+              margin-top: -15px;
+              z-index: 1;
+              background-color: #fff;
+              border-radius: 5px;
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+              margin-top: -15px;
+              filter: drop-shadow(2px 22px 40px rgba(0,0,0,.3));
+            }
+            /*logo in sub nav code for horizontal nav bar*/
+            .sub-nav img{
+              height: 2em;
+            }
+            /*words in sub nav bar*/
+            .sub-nav a {
+              height: 100%;
+              text-decoration: none;
+              color: #333;
+              padding: 15px;
+              display: flex;
+              align-items: center;
+            }
+            /*button in sub nav bar*/
+            .sub-nav .course-button{
+              border-radius: 20px;
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+              padding: 5px;
+              transition:  0.3s ;
+              
+
+            }
+            .sub-nav span{
+              margin-right: auto;
+            }
+            
+            .sub-nav a:hover{
+              background-color:#A4C2DB;
+            }
+            .sub-nav .course-button:hover{
+              padding: 7px;
+            }
+          
+            @media only screen and (max-width: 600px) {
+              .main-nav {
+                flex-direction: column;
+              }
+            }
+            /*side nav bar*/
+            .icons {
+              position: fixed;  
+              right: 0;  
+              top: 50%;  
+              transform: translateY(-50%);  /* Adjust vertical position if needed */
+              display: flex;
+              flex-direction: column;
+              padding: 10px;
+              z-index: 1000 !important;
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+            /*icons in side nav bar and section1*/
+            .icons i,.section1 i{
+              color: white;
+              margin: 10px;
+              font-size: 1.5em;
+            }
+            .section1{
+              display: flex;
+              flex-direction: row;
+              justify-content:flex-end;
+              align-items: center;
+              direction: rtl;
+              margin-top: 60px;
+              padding: 20px;
+              
+            }
+            .home {
+              display: flex;
+              flex-direction: row-reverse;
+              justify-content:flex-start;
+              align-items: center;
+              margin-top: 60px;
+              width: 100%;  /* Take full width */
+            }
+            .video{
+              width: 30%;
+            }
+            .container{
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: flex-start;
+              
+            
+            }
+            .container a,.btnsec5{
+              text-decoration: none;
+              width: 200px;
+              text-align: center;
+              color: white;
+              background-color: #1A2B4F;
+
+            }
+            .subtitle{
+              color:white;
+              text-align: right;
+              font-size: 1.1em;
+              font-weight: bolder;
+              direction: ltr;
+
+              
+            }
+            h2{
+              color:white;
+              font-weight: bolder;
+            }
+            h2 span{
+              background-color: white;
+              color:#1A2B4F;
+              padding: 1px 3px;
+              border-radius: 70px;
+
+            }
+            .home img{
+              width: 30%;
+              height: auto;
+            }
+            
+            
+            
+            .section1 img{
+              width: 60%;
+            }
+            .buttons{
+              display: flex;
+              flex-direction: row;
+              justify-content: space-evenly;
+
+            }
+            .button ,.btnsec5{
+              height: 60px;
+              width: 150px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              transition: all 0.8s ease;
+              position: relative;
+              border: 2px solid #102b41;
+              margin: 0 40px;
+              box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+                rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+            }
+            
+            
+          
+            .button ,.btnsec5{
+              box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+              transition: all300ms ease;
+              border-radius: 20px;
+            }
+            
+            .button:hover ,.btnsec5:hover {
+              background-color: #324f75;
+            }
+
+            .card-container {
+              display: flex;
+              flex-direction: row;
+              align-items: center; /* Allow cards to wrap on smaller screens */
+              justify-content: space-evenly; /* Distribute cards evenly */
+              margin: 0 auto; /* Center the container horizontally */
+              width: 100%; /* Adjust width as needed */
+            }
+            #featureImage{
+              height: 100%;
+              width: auto;
+            }
+            .cards{
+              display: flex;
+              flex-direction: column; /* Allow cards to wrap on smaller screens */
+              justify-content: center; 
+            }
+            .feature_card{
+              display: flex;
+              flex-direction: column; /* Allow cards to wrap on smaller screens */
+              justify-content: center; 
+              text-align: center;
+              align-content: center;
+              color: white;
+              background-color: transparent;
+              border-color: #cdcddc;
+              border-radius: 70px;
+              border: 1px solid;
+              margin: 10px;
+              padding: 20px;
+              cursor: pointer;
+
+              
+            }
+            
+            .feature_card.active {
+              background-color: #ffffff;
+              color:#1A2B4F  ;/* Change this to your desired background color */
+            }
+            
+            
+            .section3{
+              display: flex;
+              flex-direction: column;
+              padding: 20px;
+              margin-top: 20px;
+              margin-bottom: 20px;
+            }
+            h1{
+              color: white;
+              margin-bottom: 25px;
+
+            }
+            span{
+              color: #A4C2DB;
+            }
+            .course_card-container {
+              display: flex; /* Allow cards to wrap on smaller screens */
+              justify-content: center; /* Distribute cards evenly */
+              margin: 0 auto; /* Center the container horizontally */
+              width: 85%; 
+              
+            }
+            
+            .course_card {
+              display: flex;
+              flex-direction: column;
+              flex: 0 0 35%; /* Set card width to 25% of container */
+              margin: 10px;
+              background-color: #131f39;
+              border-top-left-radius: 20px;
+              border-top-right-radius: 20px;
+              box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+              color: #b3b8cd; 
+              text-align: center; /* Center text within cards */
+              height: fit-content;
+              
+            }
+            
+            .course_card img {
+              width: 100%;
+              height: auto;
+              padding: 15px;
+              border-top-left-radius: 20px;
+              border-top-right-radius: 20px;
+            /* Adjust image height as needed */ /* Scale image to fill container */
+            }
+            
+            .course_card-content {
+              display: flex;
+              padding: 15px;
+              flex-direction: column; /* Stack content vertically */
+              justify-content: center; /* Vertically align content in center */
+              height: 200px; /* Adjust content height as needed */
+              
+            }
+            
+            .course_card-content h3 {
+              margin-top: 5px;
+              margin-bottom: 5px;
+              text-align: left;
+              
+            }
+            .course_card-content p {
+              font-size: smaller;
+              text-align: right;
+            }
+            .section2{
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              width: 100%;
+              padding: 20px;
+              margin-top: 20px;
+              margin-bottom: 20px;
+            }
+            .section2 h1{
+              color: white;
+              text-align: left;
+
+            }
+            .detailes{
+              display: flex;
+              flex-direction: row-reverse;
+              width: 100%;
+              justify-content: space-between;
+              text-align: left;
+              margin-top: 15px;
+              color: white;
+              font-weight: lighter;
+              margin-top: 0;
+              padding: 0px 15px 0px 15px;
+            }
+            .link{
+              color: white;
+              font-size: bolder;
+              background-image: linear-gradient(to bottom right, rgb(29, 46, 94), rgb(73, 83, 213));
+              padding: 10px 5px 10px 5px;
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+              margin-bottom: 0;
+              cursor: pointer;
+            }
+          
+            .title1 {
+              width: 100%;
+              display: flex;
+              flex-direction: row-reverse;
+              justify-content: space-between;
+              align-items: center;
+              color: white;
+              direction: rtl;
+            }
+            
+            .title1 h1 {
+              margin: 0;
+              text-align: left;
+            }
+            
+            .title1 p {
+              margin: 0;
+              font-size: 16px;
+              color: #ffffff;
+              cursor: pointer;
+              text-align: right;
+              white-space: nowrap; /* prevent wrapping */
+            }
+            
+            .wrapper {
+              max-width: 100%; /* set max-width to 100% of the screen width */
+              overflow-x: hidden; /* prevent horizontal scrolling */
+              margin: 0 auto; /* center the wrapper horizontally */
+            }
+          
+          .wrapper .swiper-wrapper {
+            width: 100%;
+            height: 35em;
+            display: flex;
+            align-items: center;
+          }
+          
+          .wrapper .swiper-wrapper .card {
+            width: 320px;
+            height: fit-content;
+            background-color: #1A2B4F;
+            box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+            color: #b3b8cd; 
+            padding-top: 30px;
+            position: relative;
+            text-align: center;
+            border-radius: 2em;
+            padding: 2em 1em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 2em;
+            
+          }
+          .card span{
+            color: #1A2B4F;
+            background-color: #febb0b;
+            border-radius: 3px;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 3px 7px;
+            position: absolute;
+            top: 30px;
+            left: 30px; 
+          }
+          .card .image {
+            width: 10em;
+            height: 10em;
+            border-radius: 50%;
+            border: 5px solid #4070f4;
+            padding: 3px;
+            margin-bottom: 2em;
+          }
+          
+          .card .image img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+          
+          .card .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          
+          .card .content .title {
+            font-size: 1.5em;
+            font-weight: 600;
+            position: relative;
+            top: 0.2em;
+          }
+          
+          .card .content .name {
+            color: #4070f4;
+          }
+          
+        
+          
+          ::-webkit-scrollbar {
+            width: 1px;
+          }
+        
+        /* ANIMATION */
+        @keyframes entryFromBottom {
+            0% {
+                transform: translateY(50%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        /* Slider controls */
+        .slider-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        
+        .slider-controls button {
+            background-color: #febb0b;
+            border: none;
+            color: #1A2B4F;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        
+        .slider-controls button:hover {
+            background-color: #e0a700;
+        }
+        .image_container {
+          display: grid;
+          grid-template-columns: repeat(auto-fit,300px);
+          grid-gap: 10px;
+          align-content: center;
+          justify-content: center;
+          }
+          
+          .item {
+          color: white;
+          text-align: center;
+          }
+          .item a:hover{
+            color: white;
+            background-color: #102b41;
+          }
+          
+          .item img{
+          width: 300px;
+          height: auto;
+          }
+          .awards_container{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+          }
+          .awards_card{
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            height: fit-content;
+            margin: 0 20px 0 20px;
+            
+            
+          }
+          .awards_card .image{
+            box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            width: 90%;
+            height: auto;
+            margin: 0 20px 0 20px;
+            margin-bottom: -50px;
+            transition: 0.5s;
+          }
+          .awards_card .image:hover{
+            width: 95%;
+          }
+          .content2{
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+            z-index: 10px;
+            padding: 10px;
+            width: 80%;
+            height: auto;
+          }
+          .content2 img{
+            width: 4em;
+            margin: 3px;
+            align-self: flex-end;
+          }
+          h1{
+            margin-top: 40px;
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+          }
+
+          .wrapper_part6 {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container_part6 {
+            height: 400px;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: start;
+        }
+        
+        .card_part6 {
+            width: 200px;
+            justify-content: center;
+            border-radius: .75rem;
+            background-size: cover;
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 2rem;
+            margin: 0 10px;
+            display: flex;
+            align-items: flex-end;
+            transition: .6s cubic-bezier(.28,-0.03,0,.99);
+            box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+        }
+        
+        .card_part6 > .row {
+            color: white;
+            display: flex;
+            justify-content: center;
+            flex-wrap: nowrap;
+            position:absolute;
+        }
+        video {
+          height: 100%;
+          width: auto;
+          object-fit: cover;
+          align-self: center;
+        }
+        
+        .card_part6 > .row > .description {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+            height: max-content;
+            padding: 5px;
+            font-weight:lighter;
+            opacity: 0;
+            transform: translateY(30px);
+            transition-delay: .3s;
+            transition: all .3s ease;
+            z-index: 3em;
+            color:#1A2B4F;
+            background-color: white;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        
+
+        
+        .description h4 {
+            text-transform: uppercase;
+            font-size: bolder;
+        }
+        
+        .card6 {
+            display: none;
+        }
+        
+        .card6:checked + .card_part6 {
+            width: 500px;
+            
+        }
+        .card6:checked + video {
+          height: max-content;
+          width: auto;
+          object-fit: cover;
+
+
+      }
+        
+        .card6:checked + .card_part6 .description {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+        .section6{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          place-content: center;
+          padding: 20px;
+          margin-top: 20px;
+        }
+        .wrapper_part7 {
+          width: 100%;
+          display: flex;
+          place-self: center;
+          align-items: center;
+          justify-content: center;
+        }
+        .slider {
+          width: 90%;
+          height: 200px;
+          position: relative;
+          background: white;
+          box-shadow: 0 10px 20px -10px rgba(0,0,0,0.2);
+          display: flex;
+          overflow: hidden;
+          border-radius: 20px;
+        }
+        .slide_part7 {
+          height: 200px;
+          display: flex;
+          align-items: center;
+          animation: slideshow 30s linear infinite ;
+          animation-direction: alternate;
+
+        }
+        .slide_part7 img {
+          height: 140px;
+          padding: 0 30px 0 30px;
+        }
+        @keyframes slideshow {
+          0% {transform: translateX(0);}
+          100% {transform: translateX(100%);}
+        }
+        .slide_part7::before, .slide_part7::after {
+          height: 200px;
+          width: 200px;
+          position: absolute;
+          content: "";
+          /*background: linear-gradient(to right, white 0%, rgba(255,255,255,0) 80%);*/
+          z-index: 2;
+        }
+        .slide_part7::before {
+          left: 0;
+          top: 0;
+        }
+        .slide_part7::after {
+          right:0;
+          top:0;
+          transform: rotateY(180deg);
+        }
+        .section7{
+          direction: rtl;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          place-content: center;
+          padding: 10px 20px 60px 20px;
+          
+        }
+        .btn {
+          background-color: #506e94; /* Green */
+          color: #ffffff; /* White */
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        
+        .btn:hover {
+          background-color: #2a4860; /* Darker green on hover */
+        }
+        #paragraph{
+          border-right: solid 5px #506e94;
+          border-radius: 5px;
+          text-align: right;
+          padding: 5px;
+        }
+        .subTitle{
+          font-weight: bolder;
+          font-size: larger;
+        }
+        .open-slidebar-button{
+          position: fixed;
+          top: 1em;
+          left: 1em;
+        }
+        #slidebar-active{
+          display: none;
+        }
+        .open-slidebar-button , .close-slidebar-button{
+          display: none;
+        }
+        .hidden{
+          opacity: 0;
+          filter: blur(5px);
+          transform: translatey(50%);
+          transition: all 1s;
+        }
+        .show{
+          opacity: 1;
+          filter: blur(0);
+          transform: translatey(0);
+        }
+        .course_card:nth-child(2){
+          transition-delay: 200ms;
+        }
+        .course_card:nth-child(3){
+          transition-delay: 400ms;
+        }
+
+        .awards_card:nth-child(2){
+          transition-delay: 400ms;
+        }
+        .box a:hover{
+          color:#131f39;
+        }
+        .section8{
+          display: flex;
+          flex-direction: column;
+          padding: 40px;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          margin: 20px 0;
+          text-align: right;
+          direction: rtl;
+          border-right: 5px solid #506e94;
+          border-left: 5px solid #506e94;
+          
+        }
+        .section8 p{
+          width: 80%;
+        }
+        .section8 span{
+          color: white;
+          background-color: #506e94;
+          padding: 7px;
+          border-radius: 70px;
+        }
+        .section9{
+          bottom: 0;
+          right: 0;
+          left: 0;
+          background-color: #506e94;
+          color: white;
+          padding: 20px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          text-decoration: none;
+        }
+        .section9 img{
+          width: 200px;
+          height: auto;
+        }
+        .section9 i{
+          font-size: xx-large;
+          color:#506e94;
+          background-color: rgba(255, 255, 255, 0.668);
+          padding: 2px;
+          margin: 5px;
+          border-radius: 10px;
+        }
+        .footer a{
+          text-decoration: none;
+          
+          margin: 6px;
+          color: white;
+        }
+        .footer{
+          font-size: larger;
+          justify-content: center;
+          align-items:flex-start;
+        }
+        .modal1{
+          display: none;
+          position: fixed;
+          z-index: 1;
+          right: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          overflow: auto;
+          background-color: rgb(0, 0, 0);
+          background-color: rgba(0, 0, 0, 0.9);
+        }
+        .modal-content1{
+          margin: 20% auto;
+          padding: 20px;
+          width:100%;
+          max-width: fit-content;
+          background-color: #fff;
+          position: relative;
+        }
+        
+        .close1{
+          color: #000000;
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          font-size: 30px;
+          font-weight: bold;
+          
+        }
+        
+        
+        .close1:hover,
+        .close1:focus{
+          cursor: pointer;
+        }
+        @media only screen and (max-width: 700px) {
+          .section1{
+            
+            width: 100%;
+            justify-content: center;
+          }
+          .home .video{
+            width: 90%;
+          }
+          .main-nav {
+            flex-direction: column;
+            font-size: 0.6em;
+            justify-content: center;
+            padding-right: 1em;
+            padding-left: 1em;
+          }
+          header{
+            justify-content: center;
+            width: 100%;
+          }
+          .sub-nav {
+            font-size: 0.6em;
+            padding: 0 2px;
+            width: 80%;
+            flex-wrap: nowrap;
+          }
+          .sub-nav a{
+            padding: 5px;
+          }
+          .home{
+            flex-direction: column;
+            font-size: 1.2em;
+            width: 100%;
+          }
+          .subtitle, .container{
+            align-items: center;
+            justify-content: center;
+            width: 90%;
+          }
+          .buttons{
+            flex-direction: column;
+            justify-content: space-between;
+          }
+          .buttons a{
+            margin-bottom: 10px;
+          }
+          .wrapper_part6 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .card_part6 {
+          width: 30px;
+          
+        }
+        .card6:checked + .card_part6 {
+          width: 200px;
+        }
+        .description h4{
+          font-size: 0.9em;
+          padding: 2px;
+        }
+        .card-container{
+          flex-direction: column;
+          justify-content: space-evenly;
+          font-size: 0.8em;
+        }
+        .cards{
+          margin-top: 0px;
+        }
+        .course_card-container{
+          flex-direction: column;
+        }
+        /*.image_container {
+          display: grid;
+          grid-template-columns: auto auto;
+          grid-gap: 5px;
+          align-content: center;
+          justify-content: center;
+          }*/
+          
+          .awards_container{
+            flex-direction: column;
+            justify-content: space-between;
+          }
+          .awards_card{
+            margin-top: 10px;
+            width: 100%;
+          }
+          
+          #featureImage{
+            width:70%;
+            height: auto;
+          }
+          .icons {
+            padding: 2px;
+          }
+          /*icons in side nav bar and section1*/
+          .icons i,.section1 i{
+            margin: 5px;
+            font-size: 1em;
+          }
+          .section9{
+            flex-direction: column;
+          }
+
+        }
+        
+
+
+
+        
+      </style>
+  </head>
+  <body>
+  <!-- header code of main nav and sub nav --> 
+    <header>
+      <!-- code of main nav  --> 
+      <nav class="main-nav">
+        <div class="box">
+          <i class="fa-solid fa-phone"></i>
+          <a class="hover_animation"href="tel:+201062302368" target="_blank"> 01062302368 |  </a>
+          <i class="fa-regular fa-clock"></i>
+          <a>مواعيد العمل من 2 ظهرا الى 7 مساءا</a>
+          
+        </div>
+        <div class="box">
+          <i class="fa-solid fa-location-dot"></i>
+          <a href="https://maps.app.goo.gl/X3ZpN5NfhVZTdH4u7" target="_blank">بنها - الأهرام - منطقة الآثار - بجوار السجل المدنى - البوابة الخلفية لكلية آداب</a>
+        </div>
+      </nav>
+      <!-- code of sub nav  --> 
+      <nav class="sub-nav">
+          
+          <a href="index.html"><img src="i.png" alt="logo"></a>
+          <a href="#section1">الرئيسية</a>
+          <a href="#section8">عن الأكاديمية</a>
+          <a href="#section2">الكورسات</a>
+          <a href="#section6">مشاريع الطلبة</a>
+        <!-- code of subscribe button  --> 
+          <span><a class="course-button"href="#">اشترك الآن فى كورساتنا</a></span>
+
+      </nav>
+    </header>
+    <!-- vertical nav bar code -->
+    <div class="icons">
+      <a href="https://www.facebook.com/iDeveloperAcademy" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+      <a href="https://m.me/iDeveloperAcademy" target="_blank"><i class="fa-brands fa-facebook-messenger"></i></a>
+      <a href="https://wa.me/201062302368" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+        <div class="section1"id="section1">
+          
+          <div class="home">
+            <video class="video"width="320" height="240" loop muted autoplay>
+              <source src="Untitled design.mp4" type="video/mp4">
+            </video>
+            
+              <div class="container">
+
+                  <img src="Untitled design.png" alt="image">
+                  <h2>طريقك
+                    <span>لاحتراف</span>
+                    البرمجة</h2>
+                  <h3 class="subtitle">بداية من 7 سنين هيكون سن مثالى لابنك انه يدرس علوم البرمجة و الروبوتات ✅<br> أفضل المشرفين للتدريس و التعامل مع الأطفال لأكثر من عشر تراكات ✅</h3>
+                  <div class="buttons">
+                  
+                      <a class="button" href="#section2">اشترك الآن فى كورساتنا<i class="fa-solid fa-circle-play"></i></a>
+                      <div class="grid">
+                      
+                            
+                            <button class="btnsec5" id="openModalBtn1">شوف برومو فيديو</button>
+                            <div id="videoModal1" class="modal1">
+                              <div class="modal-content1">
+                                  <span class="close1">&times;</span>
+                                  <iframe width="100%" height="auto" src="https://www.youtube.com/embed/hkd7lFYePnY" title="promo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                              </div>
+                             </div>
+                        </div>
+                   
+
+
+                  </div>
+
+              </div>    
+              
+          
+          </div>
+      </div>
+      <div class="section6" id="section6">
+        <h1>🎙تعرف على آراء 
+          اولياء الأمور و الطلبة و أعمال الطلبة</h1>
+      <div class="wrapper_part6">
+        <div class="container_part6">
+          
+            <input class="card6" type="radio" name="slide" id="c1" >
+            <label for="c1" class="card_part6">
+              <video autoplay muted loop id="myVideo">
+                <source src="video.mp4" type="video/mp4">
+              </video>
+                <div class="row">
+                  
+                    <div class="description">
+                        <h4>تطبيق الطلبة فى محاضرة أوردينو<i class="fa-solid fa-circle-play"></i></h4>
+                    </div>
+                </div>
+            </label>
+            <input class="card6"type="radio" name="slide" id="c2" checked>
+            <label for="c2" class="card_part6">
+              <video autoplay muted loop id="myVideo">
+                <source src="video2.mp4" type="video/mp4">
+              </video>
+                <div class="row">
+                    <div class="description">
+                        <h4>بعض آراء الطلبة و اولياء الأمور<i class="fa-solid fa-circle-play"></i></h4>
+                    </div>
+                </div>
+            </label>
+            <input class="card6" type="radio" name="slide" id="c3" >
+            <label for="c3" class="card_part6">
+              <video autoplay muted loop id="myVideo">
+                <source src="video3.mp4" type="video/mp4">
+              </video>
+                <div class="row">
+                    <div class="description">
+                        <h4>أعمال بعض الطلبة<i class="fa-solid fa-circle-play"></i></h4>
+                        
+                    </div>
+                </div>
+            </label>
+            <input class="card6" type="radio" name="slide" id="c4" >
+            <label for="c4" class="card_part6">
+              <video autoplay muted loop id="myVideo" >
+                <source src="video4.mp4" type="video/mp4">
+              </video>
+                <div class="row">
+                    <div class="description">
+                        <h4>أعمال بعض الطلبة<i class="fa-solid fa-circle-play"></i></h4>
+                    </div>
+                </div>
+            </label>
+        </div>
+    </div>
+    </div>
+    <div class="section7">
+      <h1>أدوات تطوير برمجي و تكنولوجيا احترافية في مكان واحد</h1>
+      <div class="wrapper_part7">
+        <div class="slider">
+            <div class="slide_part7">
+                <img src="im-python.png" alt="image"/>
+                <img src="im-ai.png" alt="image"/>
+                <img src="im-scratch.png" alt="image"/>
+                <img src="im-html.png" alt="image"/>
+                <img src="im-edit.png" alt="image"/>
+                <img src="im-bi.png" alt="image"/>
+                <img src="im-c++.png" alt="image"/>
+                <img src="im-vr.png" alt="image"/>
+                <img src="im-css.png" alt="image"/>
+                <img src="im-python.png" alt="image"/>
+                <img src="im-ai.png" alt="image"/>
+                <img src="im-scratch.png" alt="image"/>
+                <img src="im-html.png" alt="image"/>
+                <img src="im-edit.png" alt="image"/>
+                <img src="im-bi.png" alt="image"/>
+                <img src="im-c++.png" alt="image"/>
+                <img src="im-vr.png" alt="image"/>
+                <img src="im-css.png" alt="image"/>
+                <img src="im-python.png" alt="image"/>
+                <img src="im-ai.png" alt="image"/>
+                <img src="im-scratch.png" alt="image"/>
+                <img src="im-html.png" alt="image"/>
+                <img src="im-edit.png" alt="image"/>
+                <img src="im-bi.png" alt="image"/>
+                <img src="im-c++.png" alt="image"/>
+                <img src="im-vr.png" alt="image"/>
+                <img src="im-css.png" alt="image"/>
+              </div>
+        </div>
+  </div>
+    </div>
+      <div class="section3">
+          <h1>ماذا تقدم <span>الأكاديمية </span></h1>
+      <div class="card-container">
+        <img src="feature.png" id="featureImage"alt="image">
+        <div class="cards">
+          <div class="feature_card hidden"id="card1"onclick="changeImage('card1')">
+            
+            <h5>مدربين على أعلى مستوى <i class="fa-solid fa-chalkboard-user"></i></h5>
+            
+          </div>
+          <div class="feature_card hidden active"id="card2"onclick="changeImage('card2')">
+            
+              <h5>مناهج متطورةو متعددة <i class="fa-solid fa-book-bookmark"></i></h5>
+              
+            </div>
+          <div class="feature_card hidden"id="card3"onclick="changeImage('card3')">
+            
+              <h5>خطة مدروسة طويلة المدى للبرمجة <i class="fa-solid fa-ranking-star"></i></h5>
+              
+            </div>
+          <div class="feature_card hidden"id="card4"onclick="changeImage('card4')">
+            
+              <h5>كورسات أونلاين و حضورية  <i class="fa-solid fa-display"></i></h5>
+              
+            </div>
+        </div>
+        
+      </div>
+    </div>
+        <div class="section2" id="section2">
+          <div class="title1">
+            <h1>Our popular courses</h1>
+            <p>See all></p>
+          </div>
+          
+      <div class="course_card-container">
+        <div class="course_card hidden">
+          <img src="c++.png" alt="Card Image 1">
+          <div class="detailes">
+            <i class="fa-solid fa-hourglass-half"></i>
+            <p>حصة كل أسبوع (ساعتين)</p>
+            <i class="fa-solid fa-book"></i>
+            <p>عدد الحصص 24</p>
+          </div>
+          <div class="course_card-content">
+            <h3>C++ and problem solving</h3>
+            <p>كورس تعلم البرمجة بلغة C++ من الأساسيات إلى المفاهيم المتقدمة
+              لتفكير مختلف ومهارة عالية في حل المشكلات اللي ممكن تقابل ابنك سواء في الدراسة او يومه العادي.</p>
+          </div>
+          <p class="link">احجز مكانك</p>
+          
+        </div>
+        <div class="course_card hidden">
+          <img src="robo.png" alt="Card Image 2">
+          <div class="detailes">
+            
+            <i class="fa-solid fa-hourglass-half"></i>
+            <p>حصة كل أسبوع (3 ساعات)</p>
+          
+            <i class="fa-solid fa-book"></i>
+            <p>لمدة خمس أشهر</p>
+            
+          </div>
+          <div class="course_card-content">
+            <h3>Robotics and scratch</h3>
+            <p>الكورس عبارة عن 3 تراك أساسين :التراك الأول [ مدته شهر واحد ]: برمجه ألعاب وحل ألغاز هندسيه باستخدام برامج scratch & RoboMind.
+
+              التراك الثاني [ شهرين ] :تعلم لغه برمجه الاردوينو واستخدامها في التحكم بإشارات المرور بعد بناء اشاره مرور الكترونيه.
+              
+              التراك الثالت [ شهرين ] :تعلم أجزاء الروبوت واستخدام لغه الاردوينو في برمجه اول روبوت .</p>
+          </div>
+          <p class="link">احجز مكانك</p>
+        </div>
+        <div class="course_card hidden">
+          <img src="videoscribe.png" alt="Card Image 3">
+          <div class="detailes">
+            <i class="fa-solid fa-hourglass-half"></i>
+            <p>حصة كل أسبوع(ساعة و نص)</p>
+            <i class="fa-solid fa-book"></i>
+            <p>عدد الحصص 4</p>
+            
+          </div>
+          <div class="course_card-content">
+            <h3>VideoScribe</h3>
+            <p>ابنك هيتعلم صناعة فيديوهات الوايت بورد أنيميشن على برنامج Video scribe
+
+              محتويات الكورس:
+              basic of desings
+              ,images in videoscribe
+              ,voice in videoscribe
+              ,camira move in videoscribe
+              ,build projects
+              ,AI tools
+              </p>
+          </div>
+          <p class="link">احجز مكانك </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="wrapper">
+      <div class="swiper-wrapper">
+        <div class="card swiper-slide">
+          <span class="pro">Director</span>
+          <div class="image">
+            <img src="director.jpg" alt="" />
+          </div>
+
+          <div class="content">
+            <h3>م/أحمد سمير</h3>
+            <p>CEO founder</p>
+          </div>
+        </div>
+        <div class="card swiper-slide">
+          <span class="pro">Head of learning</span>
+          <div class="image">
+            <img src="3 (2).png" alt="" />
+          </div>
+
+          <div class="content">
+            <h3>م/مصطفى فتحى</h3>
+            <p>Robotics instructor</p>
+          </div>
+        </div>
+        <div class="card swiper-slide">
+          <span class="pro">Trainer</span>
+          <div class="image">
+            <img src="2 (2).png" alt="" />
+          </div>
+
+          <div class="content">
+            <h3>م/عبد الله هشام</h3>
+            <p>Robotics instructor</p>
+          </div>
+        </div>
+        <div class="card swiper-slide">
+          <span class="pro">Trainer</span>
+          <div class="image">
+            <img src="images/img1.jpg" alt="" />
+          </div>
+
+          <div class="content">
+            <h3>م/منار خالد</h3>
+            <p>Robotics instructor</p>
+          </div>
+        </div>
+        <div class="card swiper-slide">
+          <span class="pro">Trainer</span>
+          <div class="image">
+            <img src="images/img1.jpg" alt="" />
+          </div>
+
+          <div class="content">
+            <h3>م/إسراء سعيد</h3>
+            <p>Robotics instructor</p>
+          </div>
+        </div>
+        <div class="card swiper-slide">
+          <span class="pro">Trainer</span>
+          <div class="image">
+            <img src="e.salma.jpg" alt="" />
+          </div>
+
+          <div class="content">
+            <h3>م/سلمى الحسن</h3>
+            <p>problem solving and <br /> C++ instructor</p>
+          </div>
+        </div>
+        <div class="card swiper-slide">
+          <span class="pro">Trainer</span>
+          <div class="image">
+            <img src="images/img1.jpg" alt="" />
+          </div>
+
+          <div class="content">
+            <h3>م/إيمان خاطر</h3>
+            <p>front-end developer and <br /> web development instructor</p>
+          </div>
+        </div>
+        <div class="card swiper-slide">
+          <span class="pro">Trainer</span>
+          <div class="image">
+            <img src="images/img1.jpg" alt="" />
+          </div>
+
+          <div class="content">
+            <h3>م/مصطفى أشرف</h3>
+            <p>Robotics instructor</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="image_container">
+      <div class="item">
+        <img src="im1.jpg" alt="Image 1">
+      </div>
+      <div class="item">
+        <p class="subTitle">تعرف على مبرمجى المستقبل</p>
+        <a href="gallery.html" target="_blank"><button class="btn" >شوف باقى صور رحلتنا</button></a>
+      </div>
+      <div class="item" id="paragraph">
+        <p >صور طلابنا المبدعين خلال رحلتنا ونحن هنا لبناء مستقبل مشرق للأطفال و الشباب من خلال تقديم رحلة تعليمية متكاملة. انضموا إلينا في رحلة إلهامية في عالم الابتكار والتكنولوجيا</p>
+          
+      </div>
+      <div class="item">
+        <img src="im13.jpg" alt="Image 1">
+      </div>
+      <div class="item">
+        <img src="im2.jpg" alt="Image 2">
+      </div>
+      
+      <div class="item">
+        <img src="im3.jpg" alt="Image 2">
+      </div>
+      <div class="item">
+        <img src="im4.jpg" alt="Image 3">
+      </div> 
+      <div class="item">
+        <img src="im5.jpg" alt="Image 3">
+      </div>
+    </div> 
+    <div class="section5">
+      <h1>🎖أحدث إنجازتنا
+      </h1>
+      <div class="awards_container" >
+        <div class="awards_card hidden">
+          <img class="image"src="6.png" alt="image">
+          <div class="content2">
+            <img src="8.png" alt="logo">
+            <h3>2024</h3>
+            <h6>المشاركة و حصد المراكز الأولى على مستوى الجمهورية فى مسابقة كوديفور الدولية</h6>
+          </div>
+          </div>
+        <div class="awards_card hidden">
+          <img class="image"src="7.png" alt="image">
+          <div class="content2">
+            <img src="9.png" alt="logo">
+            <h3>28/3/2024</h3>
+            <h6>التأهل للعشرة الأوائل على مستوى الجمهورية فى (جائزة الدولة للمبدع الصغير)</h6>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="section8" id="section8">
+        <h1>عن <span>الأكاديمية</span></h1>
+        <p>97 مليون وظيفة هتظهر فى مستقبل ابنك_ جهزه لسوق  العمل من دلوقتى 
+          ده لإن السوق محتاج مهارات جديدة، منها مهارات البرمجة  والذكاء الاصطناعي وتحليل البيانات  
+          فى أكاديمية iDeveloper متوفر تراكات مختلفة حسب  اهتمامات وسن ابنك!  ابدأ دلوقتى وعلمه أساسيات المستقبل  
+          </p>
+      </div>
+      <div class="section9">
+        <div>
+          <img src="Untitled design.png" alt="logo">
+          <h5>طريقك لاحتراف البرمجة</h5>
+          <div class="icons-bar">
+            <a href="https://www.facebook.com/iDeveloperAcademy" target="_blank">
+              <i class="fa-brands fa-square-facebook"></i>
+            </a>
+            <a href="https://m.me/iDeveloperAcademy" target="_blank"><i class="fa-brands fa-facebook-messenger"></i></a>
+            <a href="https://wa.me/201062302368" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://wa.me/201062302368" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div>
+          <p>لعنوان، بنها الأهرام، منطقة الآثار بجوار السجل  المدنى - البوابه الخلفية لكلية آداب 
+            <br/> للتواصل: 01062302368</p>
+        </div>
+        <div class="footer">
+          <p>©2024 iDeveloper. All rights reserved.</p>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Privacy & Security</a>
+        </div>
+      </div>
+    <!--swiperJS JS-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="app.js"></script>
+      <script>
+        var modal1 = document.getElementById("videoModal1");
+        var btn1 = document.getElementById("openModalBtn1");
+        var span1 = document.getElementsByClassName("close1")[0];
+        var videoFrame1 = document.getElementById("videoFrame1");
+        
+        btn1.onclick = function() {
+            modal1.style.display = "block";
+            var videoId1 = "0yfXjroGjuE"; // Replace this with your YouTube video ID
+            videoFrame1.src = "https://youtube.com/embed/" + videoId1;
+        }
+        
+        span1.onclick = function() {
+            modal1.style.display = "none";
+            videoFrame1.src = "";
+        }
+        
+        window.onclick = function(event) {
+            if (event.target == modal1) {
+                modal1.style.display = "none";
+                videoFrame1.src = "";
+            }
+        }
+        
+        // Make the modal responsive
+        window.addEventListener('resize', () => {
+        const modalContent1 = modal.querySelector('.modal-content1');
+        modalContent1.style.width = Math.min(500, window.innerWidth) + 'px';
+        modalContent1.style.height = Math.min(300, window.innerHeight) + 'px';
+        });
+        
+
+      </script>
+  </body>
+  </html>
